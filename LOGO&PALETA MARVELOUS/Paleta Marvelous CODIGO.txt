@@ -1,0 +1,36 @@
+/* CSS HEX */
+--monza: #cc0436;
+--mirage: #151b24;
+--crimson: #d20c3c;
+--crimson: #d30c44;
+--claret: #801032;
+--wine-berry: #53142b;
+--shiraz: #a40d38;
+--shiraz: #b40c3c;
+--shiraz: #bc0c3c;
+
+
+/* SCSS HEX */
+$monza: #cc0436;
+$mirage: #151b24;
+$crimson: #d20c3c;
+$crimson: #d30c44;
+$claret: #801032;
+$wine-berry: #53142b;
+$shiraz: #a40d38;
+$shiraz: #b40c3c;
+$shiraz: #bc0c3c;
+
+
+/* SCSS RGB */
+--monza: rgba(204,4,54,1);
+--mirage: rgba(21,27,36,1);
+--crimson: rgba(210,12,60,1);
+--crimson: rgba(211,12,68,1);
+--claret: rgba(128,16,50,1);
+--wine-berry: rgba(83,20,43,1);
+--shiraz: rgba(164,13,56,1);
+--shiraz: rgba(180,12,60,1);
+--shiraz: rgba(188,12,60,1);
+
+
