@@ -15,11 +15,11 @@
     <main id="container">
         <form id="cadastro_form">
             <div id="form_header">
-                <h1>Cadastro do Funcionario</h1>
+                <h1>Cadastro</h1>
             </div>
 
 
-            <div id="inputs">
+            <!-- <div id="inputs">
                 <div id="input-box">
                     <label for="codigo">
                         Codigo da Empresa
@@ -28,16 +28,16 @@
                             <input type="text" id="input_codEmpresa" placeholder="03241AB">
                         </div>
                     </label>
-                </div>
+                </div> -->
 
 
             <div id="inputs">
                 <div id="input-box">
                     <label for="User">
-                        Nome do Funcionario
+                        Nome de Usuário
                         <div class="input-field">
                             <i class="fa-regular fa-user"></i>
-                            <input type="text" id="input_user"  placeholder="Nome Completo">
+                            <input type="text" id="input_user"  placeholder="Insira seu nome de usuário">
                         </div>
                     </label>
                 </div>
@@ -82,7 +82,7 @@
 
 
 
-                    <button onclick="botao()" type="submit" id="cadastro_button">Cadastre-se</button>
+                    <button onclick="botao()"  id="cadastro_button">Cadastre-se</button>
         </form>
     </main>
 </body>
@@ -93,18 +93,19 @@
 
 
     function botao(){
-        var empresa = input_codEmpresa.value
+      
+        var usuario = input_user.value
         var email = input_email.value
         var senha = input_password.value
         var Confsenha = input_Confpassword.value
+        
 
         var tam_usuario = usuario.length
 
-        var cod = empresa.length
-
-        if (cod < 8) {
-            alert('Insira o Codigo da empresa corretamente')
+        if (tam_usuario <= 6) {
+            alert ('Insira um nome de usuário maior que 6 digitos')
         }
+
 
         var email_pcom = email.endsWith(".com")
         var email_arroba = email.indexOf('@')
