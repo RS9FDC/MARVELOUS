@@ -6,29 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleCadastro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="shortcut icon" type="imagex/png"
-        href="C:\Users\ruand\OneDrive\Área de Trabalho\FACULDADE\ALGORITMOS\Logo-_icon_.ico">
+    <!-- <link rel="shortcut icon" href="/LOGO&PALETAmarvelous/LogoSemFundo.png" type="image/x-icon"> -->
+
+    
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
     <title>Cadastre-se | Chocontrol</title>
+   
 </head>
 
 <body>
     <main id="container">
         <form id="cadastro_form">
+            <img src="file:///c%3A/Users/ruand/OneDrive%20-%20SPTech%20School/SPRINT%203/MARVELOUS/LOGO%26PALETAmarvelous/TorreVingadores.png" alt="">
+            <div class="barra"></div>
+            <div class="cadastro">
             <div id="form_header">
-                <h1>Cadastro</h1>
+                <h1>CADASTRO</h1>
             </div>
 
-
-            <!-- <div id="inputs">
-                <div id="input-box">
-                    <label for="codigo">
-                        Codigo da Empresa
-                        <div class="input-field">
-                            <i class="fa-solid fa-key"></i>
-                            <input type="text" id="input_codEmpresa" placeholder="03241AB">
-                        </div>
-                    </label>
-                </div> -->
 
 
             <div id="inputs">
@@ -37,7 +39,7 @@
                         Nome de Usuário
                         <div class="input-field">
                             <i class="fa-regular fa-user"></i>
-                            <input type="text" id="input_user"  placeholder="Insira seu nome de usuário">
+                            <input type="text" id="input_user">
                         </div>
                     </label>
                 </div>
@@ -82,7 +84,8 @@
 
 
 
-                    <button onclick="botao()"  id="cadastro_button">Cadastre-se</button>
+                    <button onclick="botao()"  id="cadastro_button">C a d a s t r e - s e</button>
+                </div>
         </form>
     </main>
 </body>
@@ -98,12 +101,21 @@
         var email = input_email.value
         var senha = input_password.value
         var Confsenha = input_Confpassword.value
+
+        var teste = 0 
+
+
+        if (usuario == '' || email == '' || senha == '' || Confsenha == '') {
+            alert ('Preencha todos os campos')
+            teste = 1
+        }
         
 
         var tam_usuario = usuario.length
 
         if (tam_usuario <= 6) {
             alert ('Insira um nome de usuário maior que 6 digitos')
+            teste = 1
         }
 
 
@@ -112,16 +124,29 @@
 
         if (email_pcom != true || email_arroba < 0) {
             alert('Seu email deve conter o caracter "@" e terminar com ".com"')
+            teste = 1
         }
 
         var tam_senha = senha.length
 
         if (tam_senha <= 6) {
             alert('Coloque uma senha com 6 ou mais caracteres')
+            teste = 1
         }
         if (Confsenha != senha) {
             alert('Confirmação de senha está errada')
+            teste = 1
         }
+
+        if (teste > 1) {
+            alert('Seu cadastro foi efetivado com sucesso')
+
+            // aqui vai entrar o link para a pagina de login
+
+        }
+
+
+        
 
     }
 </script>
