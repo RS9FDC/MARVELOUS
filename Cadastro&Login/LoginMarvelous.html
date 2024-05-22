@@ -8,31 +8,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- <link rel="shortcut icon" href="/LOGO&PALETAmarvelous/LogoSemFundo.png" type="image/x-icon"> -->
-    
+
     <link rel="shortcut icon" href="" type="image/x-icon">
 
 
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
     <title>Entrar | Marvelous</title>
-   
+
 </head>
 
 <body>
     <main id="container">
         <form id="cadastro_form">
-            <img src="file:///c%3A/Users/ruand/OneDrive%20-%20SPTech%20School/SPRINT%203/MARVELOUS/LOGO%26PALETAmarvelous/CapAmerica.png " alt="">
+            <img src="file:///c%3A/Users/ruand/OneDrive%20-%20SPTech%20School/SPRINT%203/MARVELOUS/LOGO%26PALETAmarvelous/CapAmerica.png "
+                alt="">
             <div class="barra"></div>
             <div class="cadastro">
-            <div id="form_header">
-                <h1>LOGIN</h1>
-            </div>
+                <div id="form_header">
+                    <h1>LOGIN</h1>
+                </div>
 
 
-<!-- 
+                <!-- 
             <div id="inputs">
                 <div id="input-box">
                     <label for="User">
@@ -44,28 +45,28 @@
                     </label>
                 </div> -->
 
-                        <div id="input-box">
-                            <label for="email">
-                                Email
-                                <div class="input-field">
-                                    <i class="fa-regular fa-envelope"></i>
-                                    <input type="email" id="input_email">
-                                </div>
-                            </label>
+                <div id="input-box">
+                    <label for="email">
+                        Email
+                        <div class="input-field">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" id="input_email">
                         </div>
+                    </label>
+                </div>
 
 
-                        <div id="input-box">
-                            <label for="password">
-                                Senha
-                                <div class="input-field">
-                                    <i class="fa-solid fa-lock"></i>
-                                    <input type="password" id="input_password">
-                                </div>
-                            </label>
+                <div id="input-box">
+                    <label for="password">
+                        Senha
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="input_password">
                         </div>
+                    </label>
+                </div>
 
-                        <!-- <div id="input-box">
+                <!-- <div id="input-box">
                             <label for="ConfirmPassword">
                                 Confirme sua senha
                                 <div class="input-field">
@@ -84,8 +85,16 @@
 
 
 
-                    <button onclick="botao()"  id="cadastro_button">E n t r a r</button>
+                <button onclick="botao()" id="cadastro_button">E n t r a r</button><br>
+
+                <div id="cadastro">
+
+                    <label for="a">Não possui cadastro?</label>
+                    <a href="CadastroMarvelous.html">Clique aqui</a>
+
                 </div>
+
+            </div>
         </form>
     </main>
 </body>
@@ -95,28 +104,28 @@
 <script>
 
 
-    function botao(){
-      
+    function botao() {
+
         // var usuario = input_user.value
         var email = input_email.value
         var senha = input_password.value
         // var Confsenha = input_Confpassword.value
 
-        var teste = 0 
+        var teste = 0
 
 
         if (email == '' || senha == '') {
-            alert ('Preencha todos os campos')
+            alert('Preencha todos os campos')
             teste = 1
         }
-        
+
 
         var tam_usuario = usuario.length
 
-    //    if (tam_usuario <= 6) {
-    //         alert ('Insira um nome de usuário maior que 6 digitos')
-    //         teste = 1
-    //     } 
+        //    if (tam_usuario <= 6) {
+        //         alert ('Insira um nome de usuário maior que 6 digitos')
+        //         teste = 1
+        //     } 
 
 
         var email_pcom = email.endsWith(".com")
@@ -146,7 +155,7 @@
         }
 
 
-        
+
 
     }
 </script>

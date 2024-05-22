@@ -117,3 +117,9 @@
 #cadastro_button:hover {
     transform: scale(1.05);
 }
+
+
+#cadastro a {
+    color: white;
+;
+}
