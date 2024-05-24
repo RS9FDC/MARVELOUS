@@ -30,18 +30,18 @@ background-color: #CC0436;
 
 
 #nav #botao  {
-    background: linear-gradient(-60deg,#8789f3,#ff002f); /* Cor de fundo vermelha */
-    color: white; /* Cor do texto branca */
+    background: linear-gradient(-60deg,#8789f3,#ff002f); 
+    color: white; 
     border: none;
     height: 50px; 
     width: 120px;
-    text-align: center; /* Alinhamento do texto */
-    text-decoration: none; /* Sem decoração de texto */
+    text-align: center;
+    text-decoration: none; 
     display: flex;
     align-items: center;
-    justify-content: center; /* Exibir como bloco */
-    cursor: pointer; /* Cursor de apontar */
-    font-size: 17px; /* Tamanho da fonte */
+    justify-content: center; 
+    cursor: pointer; 
+    font-size: 17px; 
     border-radius: 30px;
     text-decoration: none;
    
@@ -67,7 +67,7 @@ background-color: #CC0436;
   
   #SaibaMais {
     background-color: #CC0436;
-    height: 500px;
+    height: 600px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -76,7 +76,7 @@ background-color: #CC0436;
 
   #SaibaMais img{
     height: 100%;
-    margin-right: 30px;
+    margin-right: 140px;
     /*float: right;*/
   }
 
@@ -87,39 +87,235 @@ background-color: #CC0436;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    
 }
 #SaibaMais span{
 
-    font-size: 60px;
+    font-size: 70px;
     color: white;
     margin: auto;
+    text-align: left;
+    
+    
     
   }
 
   #SaibaMais a{
-    background: linear-gradient(-60deg,#8789f3,#ff002f); /* Cor de fundo vermelha */
-    color: white; /* Cor do texto branca */
+    background: linear-gradient(-60deg,#8789f3,#ff002f); 
+    color: white; 
     border: none;
     height: 50px; 
     width: 120px;
-    text-align: center; /* Alinhamento do texto */
-    text-decoration: none; /* Sem decoração de texto */
+    text-align: center; 
+    text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: center; /* Exibir como bloco */
-    cursor: pointer; /* Cursor de apontar */
-    font-size: 17px; /* Tamanho da fonte */
+    justify-content: center; 
+    cursor: pointer; 
+    font-size: 17px; 
     border-radius: 30px;
     text-decoration: none;
 
     margin-top: 30px;
+    margin-right: 140px;
   }
 
   #herois {
-    background-color: #341242;
-    height: 500px;
+    background: rgb(204,4,54);
+    background: linear-gradient(160deg, rgba(204,4,54,1) 46%, rgba(52,18,66,1) 46%);
+    height: 700px;
     display: flex;
     
   }
 
+  #herois img{
+    margin-left: 50px;
+  }
+
+  #txt1 {
+    display: flex;
+    /* flex-direction: row; */
+   
+    flex-direction: column;
+    margin: 100px;
+  }
+
+
+
+  #txt1 h1{
+   text-align: center;
+   color: rgb(255, 255, 255);
+  }
+
+#herois p {
+display: flex;
+margin-top: 10px;
+text-align: center;
+font-size: 20px;
+color: white;
+}
+
+  #herois2 {
+    background: rgb(52,18,66);
+    background: linear-gradient(160deg, rgba(52,18,66,1) 46%, rgba(250, 218, 40) 46%);
+    height: 700px;
+    display: flex;
+    
+    
+  }
+
+  #herois2 img{
+    margin-right: 50px;
+    
+  }
+
+  #txt2 {
+    display: flex;
+    /* flex-direction: row; */
+   /* background-color: #8789f3; */
+    flex-direction: column;
+    margin: 100px;
+    
+    
+  }
+
+
+
+  #txt2 h1{
+   text-align: center;
+   color: rgb(255, 255, 255);
+   
+  }
+
+#herois2 p {
+/* display: flex; */
+margin-top: 20px;
+font-size: 22px;
+text-align: center;
+color: white;
+
+
+
+}
+
+
+
+
+
+  #herois3 {
+    background-color: rgb(250, 218, 40);
+    height: 800px;
+    display: flex;
+    border-bottom: white solid 3px;
+  }
+
+  #herois3 img{
+    margin-left: 50px;
+    height: 80%;
+    margin-top: 70px;
+    
+    box-shadow: 0 0 30px rgb(0, 4, 255);
+    }
+
+    #txt3 {
+      display: flex;
+      /* flex-direction: row; */
+     
+      flex-direction: column;
+      margin: 100px;
+    }
   
+  
+  
+    #txt3 h1{
+     text-align: center;
+     color: rgb(0, 0, 0);
+    }
+    
+  
+
+#herois3 p {
+display: flex;
+margin-top: 10px;
+font-size: 22px;
+text-align: center;
+}
+
+
+/* #barra{
+    margin-top: 10px; 
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}*/
+
+#onu {
+    height: 700px;
+    display: flex;
+    background-color: #8789f3;
+    justify-content: center;
+    /* align-items: center; */
+    
+    /* align-items: center; */
+}
+
+#onufoto {
+  display: flex;
+  /* height: 100%;
+  width: 100%; */
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+#onu img{
+    display: flex;
+    align-items: center;
+    height: 60%;
+    /* margin-top: 200px; */
+}
+
+#txtonu  {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 150px; */
+  margin-left: 110px;
+  margin-right: 110px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+background-color: #CC0436;
+}
+
+footer a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+footer #github {
+font-size: 50px;
+color: white;
+}
+
+footer #insta {
+font-size: 50px;
+color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
