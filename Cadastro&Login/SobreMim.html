@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="SobreMim.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
@@ -17,10 +19,10 @@
     <div id="nav">
         <img src="file:///c%3A/Users/ruand/OneDrive%20-%20SPTech%20School/SPRINT%203/MARVELOUS/LOGO%26PALETAmarvelous/LogoBrancoSemFundo.png"
             alt="">
-        <a href="">QUIZ</a>
-        <a href="">HERÓIS</a>
+        <!-- <a href="">QUIZ</a> -->
+        <a href="index.html">HERÓIS</a>
         <a href="index.html">HOME</a>
-        <a href="">ONU</a>
+        <a href="index.html">ONU</a>
         <a href="LoginMarvelous.html" id="botao">E N T R A R</a>
     </div>
 
@@ -31,13 +33,38 @@
             <div class="texto">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium blanditiis culpa enim sit facilis voluptatibus dignissimos ex voluptatem libero! Odit dolore nemo delectus? Molestias similique delectus dignissimos alias ullam eum?
+                    enquanto a sessão do navegador está ativa. Ele verifica se há informações de e-mail e nome de usuário armazenadas no sessionStorage. Se ambos existirem, ele atualiza o conteúdo de um elemento HTML com o id b_usuario com o nome do usuário. Caso contrário, redireciona o usuário para a página de login (../login.html).
+
+limparSessao(): Esta função limpa todos os dados armazenados no sessionStorage e, em seguida, redireciona o usuário para a página de login (../login.html).
+
+aguardar(): Esta função é usada para mostrar uma mensagem de carregamento na interface do usuário enquanto algum processo está ocorrendo em segundo plano. Ela torna visível uma div com o id div_aguardar, que geralmente contém uma animação de carregamento.
+
+finalizarAguardar(texto): Esta função é chamada para esconder a mensagem de carregamento após a conclusão do processo em segundo plano. Ela esconde a div com o id div_aguardar e, opcionalmente, exibe uma mensagem de texto no elemento com o id div_erros_login.
+
+Basicamente, estas funções são utilizadas em um sistema web para gerenciar sessões de usuário, fornecer feedback visual durante operações assíncronas e tratar erros de login. Por exemplo, validarSessao() verifica se o usuário está logado, limparSessao() faz logout do usuário, aguardar() mostra um indicador de carregamento durante operações demoradas e finalizarAguardar() esconde o indicador de carregamento após a conclusão da operação.
                 </p>
             </div>
             <div class="foto">
-                <img src="../LOGO&PALETAmarvelous/TorreVingadores.png" alt="">
+                <img src="../LOGO&PALETAmarvelous/ImgRuan.jpg" alt="">
             </div>
         </div>
     </div>
+
+    <footer>
+
+        Todos os direitos reservados © 2024. Este site foi desenvolvido com amor e dedicação por Ruan de Oliveira.
+
+        <!-- <img src="file:///c%3A/Users/ruand/OneDrive%20-%20SPTech%20School/SPRINT%203/MARVELOUS/LOGO%26PALETAmarvelous/LogoBrancoSemFundo.png" alt=""> -->
+        <a href="https://github.com/RS9FDC">
+        <i id="github" class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="https://instagram.com/eai_ruanzg">
+        <i id="insta" class="fa-brands fa-instagram"></i>
+      </a>
+
+
+    </footer>
 
 
 
