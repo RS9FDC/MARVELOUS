@@ -5,6 +5,7 @@ use Marvelous;
 create table usuario(
 id int primary key auto_increment,
 nome char(10),
+idade int,
 email char(50),
 senha char(15)
 ); 
@@ -17,6 +18,14 @@ CREATE TABLE aviso (
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
+create table quiz (
+id int primary key auto_increment,
+heroi varchar(45),
+fk_usuario INT,
+constraint chkheroi check (heroi in ('Homem Aranha','Pantera Negra','Wolverine','Jean Gray')),
+FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+);
+
 select * from usuario;
 
 insert into usuario values
@@ -26,6 +35,40 @@ insert into aviso values
 (1, 'sapo', 'dodoizito', 1);
 
 select * from usuario join aviso on fk_usuario = usuario.id;
+
+-- Calculando a idade média apenas para o Homem Aranha
+SELECT q.heroi, AVG(u.idade) AS idade_media
+FROM quiz q
+JOIN usuario u ON q.fk_usuario = u.id
+WHERE q.heroi IN ('Homem Aranha')
+GROUP BY q.heroi;
+
+-- Calculando a idade média apenas para o Pantera Negra
+SELECT q.heroi, AVG(u.idade) AS idade_media
+FROM quiz q
+JOIN usuario u ON q.fk_usuario = u.id
+WHERE q.heroi IN ('Pantera Negra')
+GROUP BY q.heroi;
+
+-- Calculando a idade média apenas para o Wolverine
+SELECT q.heroi, AVG(u.idade) AS idade_media
+FROM quiz q
+JOIN usuario u ON q.fk_usuario = u.id
+WHERE q.heroi IN ('Wolverine')
+GROUP BY q.heroi;
+
+-- Calculando a idade média apenas para a Jean Gray
+SELECT q.heroi, AVG(u.idade) AS idade_media
+FROM quiz q
+JOIN usuario u ON q.fk_usuario = u.id
+WHERE q.heroi IN ('Jean Gray')
+GROUP BY q.heroi;
+
+-- Calculando a idade média geral
+SELECT AVG(idade) AS idade_media
+FROM usuario;
+
+
 
 truncate table usuario;
 
