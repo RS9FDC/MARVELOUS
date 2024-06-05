@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoFish</title>
+
+    <!-- Colocar CSS -->
+    <link rel="stylesheet" href="estiloQuiz.css">
+
+</head>
+
+<body>
+
+    <div class="questPgtoda">
+        <div id="questionario">
+            <h1>Qual Super-herói da Marvel você seria?</h1>
+            <form id="quizForm">
+                <div class="pergunta" id="pergunta1">
+                    <label>Qual tipo de peixe você mais gosta de pescar?</label><br>
+                    <select>
+                        <option value="A">A) Peixes de água doce</option>
+                        <option value="B">B) Peixes de água salgada</option>
+                        <option value="C">C) Peixes de água doce e salgada</option>
+                        <option value="D">D) Não tenho preferência</option>
+                    </select>
+                    <button type="button" onclick="pergunta(1)">Próxima</button>
+                </div>
+                <div class="pergunta" id="pergunta2" style="display: none;">
+                    <label>Qual é o seu método de pesca preferido?</label><br>
+                    <select>
+                        <option value="A">A) Pesca com isca natural</option>
+                        <option value="B">B) Pesca com isca artificial</option>
+                        <option value="C">C) Pesca com mosca (fly fishing)</option>
+                        <option value="D">D) Pesca com anzol e chumbada</option>
+                    </select>
+                    <button type="button" onclick="pergunta(2)">Próxima</button>
+                </div>
+                <!-- Adicione as outras perguntas aqui de forma semelhante -->
+                <div class="pergunta" id="pergunta3" style="display: none;">
+                    <label>Quanto tempo você costuma passar pescando por semana?</label><br>
+                    <select>
+                        <option value="A">A) Menos de 1 hora</option>
+                        <option value="B">B) 1 a 3 horas</option>
+                        <option value="C">C) 3 a 6 horas</option>
+                        <option value="D">D) Mais de 6 horas</option>
+                    </select>
+                    <button type="button" onclick="pergunta(3)">Próxima</button>
+                </div>
+                <div class="pergunta" id="pergunta4" style="display: none;">
+                    <label>Você prefere pescar sozinho ou em grupo?</label><br>
+                    <select>
+                        <option value="A">A) Sozinho</option>
+                        <option value="B">B) Com amigos</option>
+                        <option value="C">C) Com familiares</option>
+                        <option value="D">D) Tanto faz</option>
+                    </select>
+                    <button type="button" onclick="pergunta(4)">Próxima</button>
+                </div>
+                <div class="pergunta" id="pergunta5" style="display: none;">
+                    <label>Qual é a sua técnica favorita para atrair peixes?</label><br>
+                    <select>
+                        <option value="A">A) Usar iscas vivas</option>
+                        <option value="B">B) Utilizar iscas artificiais coloridas</option>
+                        <option value="C">C) Usar técnicas de pesca específicas para cada tipo de peixe</option>
+                        <option value="D">D) Testar diferentes métodos e técnicas</option>
+                    </select>
+                    <button type="button" onclick="pergunta(5)">Próxima</button>
+                </div>
+                <div class="pergunta" id="pergunta6" style="display: none;">
+                    <label>Qual é a sua opinião sobre a pesca esportiva?</label><br>
+                    <select>
+                        <option value="A">A) É uma prática que ajuda a preservar a natureza</option>
+                        <option value="B">B) É uma forma de relaxamento e lazer</option>
+                        <option value="C">C) É uma atividade desafiadora que requer habilidade</option>
+                        <option value="D">D) Não tenho uma opinião específica</option>
+                    </select>
+                    <button type="button" onclick="pergunta(6)">Próxima</button>
+                </div>
+                <div class="pergunta" id="pergunta7" style="display: none;">
+                    <label>Qual é a sua experiência em competições de pesca?</label><br>
+                    <select>
+                        <option value="A">A) Nunca participei</option>
+                        <option value="B">B) Já participei algumas vezes</option>
+                        <option value="C">C) Participo regularmente</option>
+                        <option value="D">D) Não tenho interesse em competições</option>
+                    </select>
+                    <button type="button" onclick="pergunta(7)">Próxima</button>
+                </div>
+                <div class="pergunta" id="pergunta8" style="display: none;">
+                    <label>Qual é o seu principal objetivo ao pescar?</label><br>
+                    <select>
+                        <option value="A">A) Pegar o maior peixe possível</option>
+                        <option value="B">B) Aprender mais sobre diferentes técnicas de pesca</option>
+                        <option value="C">C) Desfrutar da natureza e relaxar</option>
+                        <option value="D">D) Socializar e compartilhar experiências com outros pescadores</option>
+                    </select>
+                    <button type="button" onclick="pergunta(8)">Próxima</button>
+                </div>
+                <div class="pergunta" id="pergunta9" style="display: none;">
+                    <label>Você costuma pescar em diferentes estações do ano?</label><br>
+                    <select>
+                        <option value="A">A) Sim, pratico pesca durante todo o ano</option>
+                        <option value="B">B) Prefiro determinadas estações do ano para pescar</option>
+                        <option value="C">C) Não, pratico pesca apenas em épocas específicas</option>
+                        <option value="D">D) Não tenho uma preferência específica</option>
+                    </select>
+                    <button type="button" onclick="pergunta(9)">Próxima</button>
+                </div>
+                <div class="pergunta" id="pergunta10" style="display: none;">
+                    <label>Como você prefere transportar seus equipamentos de pesca?</label><br>
+                    <select>
+                        <option value="A">A) Utilizo uma mochila ou bolsa de pesca</option>
+                        <option value="B">B) Tenho um carrinho ou caixa de transporte para os equipamentos</option>
+                        <option value="C">C) Uso um veículo para transportar os equipamentos</option>
+                        <option value="D">D) Depende da situação e local de pesca</option>
+                    </select>
+                    <button type="button" onclick="pergunta(10)">Próxima</button>
+                </div>
+                <div class="pergunta" id="pergunta11" style="display: none;">
+                    <label>Qual é a sua opinião sobre a preservação dos recursos naturais durante a pesca?</label><br>
+                    <select>
+                        <option value="A">A) É fundamental respeitar as regras de preservação e sustentabilidade
+                        </option>
+                        <option value="B">B) Acredito que cada pescador deve fazer sua parte para conservar o meio
+                            ambiente</option>
+                        <option value="C">C) Não vejo a preservação ambiental como uma prioridade durante a pesca
+                        </option>
+                        <option value="D">D) Tenho interesse em aprender mais sobre práticas sustentáveis na pesca
+                        </option>
+                    </select>
+                    <button type="button" onclick="pergunta(11)">Próxima</button>
+                </div>
+                <div class="pergunta" id="pergunta12" style="display: none;">
+                    <label>Quanto tempo você costuma passar pescando por semana?</label><br>
+                    <select>
+                        <option value="A">A) Menos de 1 hora</option>
+                        <option value="B">B) 1 a 3 horas</option>
+                        <option value="C">C) 3 a 6 horas</option>
+                        <option value="D">D) Mais de 6 horas</option>
+                    </select>
+                    <button type="button" onclick="result()">Descobrir Resultado</button>
+                </div>
+            </form>
+            <div id="resultado"></div><br><br>
+            <div id="resultadoTexto"></div>
+
+
+        </div>
+
+    </div>
+   
+</body>
+<script>
+    const respostas = [];
+    var fk_usuario = sessionStorage.ID_USUARIO;
+
+    function pergunta(numPergunta) {
+
+        const select = document.querySelector(`#pergunta${numPergunta} select`);
+
+        if (select.value) {
+
+            respostas.push(select.value);
+            document.getElementById(`pergunta${numPergunta}`).style.display = 'none';
+            document.getElementById(`pergunta${numPergunta + 1}`).style.display = 'block';
+
+        } else {
+
+            alert('Por favor, selecione uma resposta.');
+            
+        }
+    }
+
+    function result() {
+        const perfil = {
+            'HomemAranha': 0,
+            'PanteraNegra': 0,
+            'Wolverine': 0,
+            'JeanGrey': 0
+        };
+
+        for (const resposta of respostas) {
+            switch (resposta) {
+                case 'A':
+                    perfil.HomemAranha++;
+                    break;
+                case 'B':
+                    perfil.PanteraNegra++;
+                    break;
+                case 'C':
+                    perfil.Wolverine++;
+                    break;
+                case 'D':
+                    perfil.JeanGrey++;
+                    break;
+            }
+        }
+
+        const max = Math.max(perfil.HomemAranha, perfil.PanteraNegra, perfil.Wolverine, perfil.JeanGrey);
+
+        let resultado = '';
+
+        for (const [key, value] of Object.entries(perfil)) {
+            if (value === max) {
+                resultado = key;
+                break;
+            }
+        }
+
+       
+
+        
+
+        document.getElementById('resultado').innerHTML = `Você se asemelha com o personagem: <h1>${resultado}</h1>`;
+
+        var heroi = resultado
+
+        // Junto com o resultadoTexto eu preciso exibir a imagem diferente de acordo com o heroi sorteado
+
+        if (heroi == 'HomemAranha') {
+            
+            resultadoTexto.innerHTML = 'O Homem aranha é um grande herói'
+        } 
+        
+        if (heroi == 'PanteraNegra') {
+            resultadoTexto.innerHTML = 'O Pantera Negra é o protetor de Wakanda'
+        }
+
+        if (heroi == 'Wolverine') {
+            resultadoTexto.innerHTML = 'O Wolverine é um exemplo a se seguir'
+        }
+
+        if (heroi == 'JeanGray') {
+            resultadoTexto.innerHTML = 'A Jean Gray tem a mente forte como aço'
+        }
+
+
+
+
+
+        fetch("/quiz/cadastrar", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      // crie um atributo que recebe o valor recuperado aqui
+      // Agora vá para o arquivo routes/usuario.js
+      heroiServer: heroi,
+      fk_usuarioServer: fk_usuario
+      
+    }),
+  })
+    .then(function (resposta) {
+      console.log("resposta: ", resposta);
+
+      if (resposta.ok) {
+       
+
+          alert('Suas respostas foram salvas')
+          
+
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+
+
+        
+
+        
+    }
+</script>
+
+</html>
+
+
+
