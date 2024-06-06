@@ -6,14 +6,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaTech | Tempo Real</title>
+    <title>Marvelous | Dashboard</title>
 
 
     <link rel="stylesheet" href="./../css/dashboards.css">
     <link rel="stylesheet" href="./../css/estilo.css" />
+    <link rel="stylesheet" href="./../css/quiz.css" />
+
 
     <script src="../js/sessao.js"></script>
-    <script src="../js/alerta.js"></script>
+    <!-- <script src="../js/alerta.js"></script> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -25,15 +27,16 @@
     <div class="janela">
 
         <div class="header-left dash-header">
-
-            <h1>AquaTech</h1>
+            <div id="logo">
+                <img src="../assets/imgRed.png" alt="">
+            </div>
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
 
             <div class="btn-nav">
-                <h3>Aquários</h3>
+                <h3>Quiz</h3>
             </div>
 
             <div class="btn-nav-white">
@@ -44,7 +47,7 @@
 
             <div class="btn-nav-white">
                 <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
+                    <h3>Experiências</h3>
                 </a>
             </div>
 
@@ -55,7 +58,7 @@
         </div>
 
         <div class="dash">
-            <div id="alerta">
+            <!-- <div id="alerta">
             </div>
             <div class="area-parametros-alerta">
                 <p class="titulo-legenda">
@@ -82,14 +85,166 @@
                         <p>Perigo</p>
                         <p>&gt;=23°C</p>
                     </div>
+                </div> -->
+            <!-- </div> -->
+
+
+
+
+
+
+            <div class="questPgtoda">
+                <div id="questionario">
+                    <h1>Qual Super-herói da Marvel você seria?</h1>
+                    <form id="quizForm">
+                        <div class="pergunta" id="pergunta1">
+                            <label>Qual é a sua abordagem preferida para resolver problemas?</label><br>
+                            <select>
+                                <option value="A">A) Utilizar a agilidade e criatividade para encontrar soluções rápidas.</option>
+                                <option value="B">B) Priorizar a estratégia e o planejamento meticuloso.</option>
+                                <option value="C">C) Enfrentar os desafios de forma direta, confiando em seus instintos.</option>
+                                <option value="D">D) Usar o poder da mente para resolver problemas complexos.</option>
+                            </select>
+                            <button type="button" onclick="pergunta(1)">Próxima</button>
+                        </div>
+                        <div class="pergunta" id="pergunta2" style="display: none;">
+                            <label>Se você se deparasse com alguém em necessidade, qual seria sua primeira reação?</label><br>
+                            <select>
+                                <option value="A">A) Oferecer ajuda imediata, aproveitando minhas habilidades para resolver a situação.</option>
+                                <option value="B">B) Analisar a situação e procurar entender as causas do problema antes de agir.</option>
+                                <option value="C">C) Agir rapidamente, confiando em minha força e determinação para ajudar.</option>
+                                <option value="D">D) Tentar acalmar a situação e resolver o problema de forma pacífica, priorizando a segurança de todos os envolvidos.</option>
+                            </select>
+                            <button type="button" onclick="pergunta(2)">Próxima</button>
+                        </div>
+                        <!-- Adicione as outras perguntas aqui de forma semelhante -->
+                        <div class="pergunta" id="pergunta3" style="display: none;">
+                            <label>Como você prefere lidar com desafios emocionais?</label><br>
+                            <select>
+                                <option value="A">A) Contornando os problemas com humor e otimismo.</option>
+                                <option value="B">B) Enfrentando os desafios com resiliência e determinação.    </option>
+                                <option value="C">C) Expressando suas emoções de forma franca e direta.</option>
+                                <option value="D">D) Buscando entender e controlar suas emoções através da meditação e introspecção.</option>
+                            </select>
+                            <button type="button" onclick="pergunta(3)">Próxima</button>
+                        </div>
+                        <div class="pergunta" id="pergunta4" style="display: none;">
+                            <label>Qual é a sua abordagem em relação à justiça e moralidade?</label><br>
+                            <select>
+                                <option value="A">A) Focar em ajudar aqueles que estão em perigo imediato.</option>
+                                <option value="B">B) Lutar contra injustiças sociais e defender os direitos dos oprimidos.</option>
+                                <option value="C">C) Priorizar a proteção dos inocentes e a punição dos culpados.</option>
+                                <option value="D">D) Buscar um equilíbrio entre justiça e compaixão, considerando os aspectos morais das decisões.</option>
+                            </select>
+                            <button type="button" onclick="pergunta(4)">Próxima</button>
+                        </div>
+                        <div class="pergunta" id="pergunta5" style="display: none;">
+                            <label>Qual é o seu maior medo?</label><br>
+                            <select>
+                                <option value="A">A) Falhar em proteger aqueles que ama.</option>
+                                <option value="B">B) Não honrar sua família.</option>
+                                <option value="C">C) Perder o controle de sua raiva e prejudicar quem você ama.</option>
+                                <option value="D">D) Não conseguir controlar seus próprios medos e machucar os outros.</option>
+                            </select>
+                            <button type="button" onclick="pergunta(5)">Próxima</button>
+                        </div>
+                        <div class="pergunta" id="pergunta6" style="display: none;">
+                            <label>Quando confrontado com um desafio iminente, qual é a sua primeira reação?</label><br>
+                            <select>
+                                <option value="A">A) Avaliar rapidamente a situação e procurar por soluções criativas.</option>
+                                <option value="B">B) Enfrentar o desafio de frente, confiando em suas habilidades e experiência.</option>
+                                <option value="C">C) Agir de forma instintiva, confiando em sua força e resistência.</option>
+                                <option value="D">D) Analisar calmamente a situação e usar a mente para planejar uma estratégia</option>
+                            </select>
+                            <button type="button" onclick="result()">Descobrir Resultado</button>
+                        </div>
+                        <!-- <div class="pergunta" id="pergunta7" style="display: none;">
+                            <label>Qual é a sua experiência em competições de pesca?</label><br>
+                            <select>
+                                <option value="A">A) Nunca participei</option>
+                                <option value="B">B) Já participei algumas vezes</option>
+                                <option value="C">C) Participo regularmente</option>
+                                <option value="D">D) Não tenho interesse em competições</option>
+                            </select>
+                            <button type="button" onclick="pergunta(7)">Próxima</button>
+                        </div>
+                        <div class="pergunta" id="pergunta8" style="display: none;">
+                            <label>Qual é o seu principal objetivo ao pescar?</label><br>
+                            <select>
+                                <option value="A">A) Pegar o maior peixe possível</option>
+                                <option value="B">B) Aprender mais sobre diferentes técnicas de pesca</option>
+                                <option value="C">C) Desfrutar da natureza e relaxar</option>
+                                <option value="D">D) Socializar e compartilhar experiências com outros pescadores</option>
+                            </select>
+                            <button type="button" onclick="pergunta(8)">Próxima</button>
+                        </div>
+                        <div class="pergunta" id="pergunta9" style="display: none;">
+                            <label>Você costuma pescar em diferentes estações do ano?</label><br>
+                            <select>
+                                <option value="A">A) Sim, pratico pesca durante todo o ano</option>
+                                <option value="B">B) Prefiro determinadas estações do ano para pescar</option>
+                                <option value="C">C) Não, pratico pesca apenas em épocas específicas</option>
+                                <option value="D">D) Não tenho uma preferência específica</option>
+                            </select>
+                            <button type="button" onclick="pergunta(9)">Próxima</button>
+                        </div>
+                        <div class="pergunta" id="pergunta10" style="display: none;">
+                            <label>Como você prefere transportar seus equipamentos de pesca?</label><br>
+                            <select>
+                                <option value="A">A) Utilizo uma mochila ou bolsa de pesca</option>
+                                <option value="B">B) Tenho um carrinho ou caixa de transporte para os equipamentos</option>
+                                <option value="C">C) Uso um veículo para transportar os equipamentos</option>
+                                <option value="D">D) Depende da situação e local de pesca</option>
+                            </select>
+                            <button type="button" onclick="pergunta(10)">Próxima</button>
+                        </div>
+                        <div class="pergunta" id="pergunta11" style="display: none;">
+                            <label>Qual é a sua opinião sobre a preservação dos recursos naturais durante a pesca?</label><br>
+                            <select>
+                                <option value="A">A) É fundamental respeitar as regras de preservação e sustentabilidade
+                                </option>
+                                <option value="B">B) Acredito que cada pescador deve fazer sua parte para conservar o meio
+                                    ambiente</option>
+                                <option value="C">C) Não vejo a preservação ambiental como uma prioridade durante a pesca
+                                </option>
+                                <option value="D">D) Tenho interesse em aprender mais sobre práticas sustentáveis na pesca
+                                </option>
+                            </select>
+                            <button type="button" onclick="pergunta(11)">Próxima</button>
+                        </div>
+                        <div class="pergunta" id="pergunta12" style="display: none;">
+                            <label>Quanto tempo você costuma passar pescando por semana?</label><br>
+                            <select>
+                                <option value="A">A) Menos de 1 hora</option>
+                                <option value="B">B) 1 a 3 horas</option>
+                                <option value="C">C) 3 a 6 horas</option>
+                                <option value="D">D) Mais de 6 horas</option>
+                            </select> -->
+                            <!-- <button type="button" onclick="result()">Descobrir Resultado</button> -->
+                        <!-- </div> -->
+                    </form>
+                    <div id="resultado"></div><br><br>
+                    <div id="resultadoTexto"></div>
+        
+        
                 </div>
+        
             </div>
 
-            <div class="cards" id="cardAquarios">
 
-            </div>
 
-        </div>
+
+
+
+
+
+
+
+            <!-- <div class="cards" id="cardAquarios">
+
+            </div> -->
+
+       
 
     </div>
 
@@ -97,23 +252,269 @@
 
 <script>
 
-    function exibirAquarios() {
-        JSON.parse(sessionStorage.AQUARIOS).forEach(item => {
-            document.getElementById("cardAquarios").innerHTML += `
-                    <div class="card-aquario">
-                        <div class="title-aquario">
-                            <h1>${item.descricao}</h1>
-                        </div>
-                        <div class="desc-aquario">
-                        <div class="temperatura">
-                            <p id="temp_aquario_${item.id}">-°C</p>
-                        </div>
-                        <div class="cor-alerta" id="card_${item.id}"></div>
-                    </div>
-                    </div>
-                    `
-        });
+    // function exibirAquarios() {
+    //     JSON.parse(sessionStorage.AQUARIOS).forEach(item => {
+    //         document.getElementById("cardAquarios").innerHTML += `
+    //                 <div class="card-aquario">
+    //                     <div class="title-aquario">
+    //                         <h1>${item.descricao}</h1>
+    //                     </div>
+    //                     <div class="desc-aquario">
+    //                     <div class="temperatura">
+    //                         <p id="temp_aquario_${item.id}">-°C</p>
+    //                     </div>
+    //                     <div class="cor-alerta" id="card_${item.id}"></div>
+    //                 </div>
+    //                 </div>
+    //                 `
+    //     });
+    // }
+
+
+
+
+
+
+    // ScriptDoQuiz
+
+    const respostas = [];
+    var fk_usuario = sessionStorage.ID_USUARIO;
+
+    function pergunta(numPergunta) {
+
+        const select = document.querySelector(`#pergunta${numPergunta} select`);
+
+        if (select.value) {
+
+            respostas.push(select.value);
+            document.getElementById(`pergunta${numPergunta}`).style.display = 'none';
+            document.getElementById(`pergunta${numPergunta + 1}`).style.display = 'block';
+
+        } else {
+
+            alert('Por favor, selecione uma resposta.');
+            
+        }
     }
+
+    let clicou = false;
+
+    function result() {
+
+        if (!clicou) {
+        console.log("Ação executada!");
+        
+
+        const perfil = {
+            'HomemAranha': 0,
+            'PanteraNegra': 0,
+            'Wolverine': 0,
+            'JeanGrey': 0
+        };
+
+        for (const resposta of respostas) {
+            switch (resposta) {
+                case 'A':
+                    perfil.HomemAranha++;
+                    break;
+                case 'B':
+                    perfil.PanteraNegra++;
+                    break;
+                case 'C':
+                    perfil.Wolverine++;
+                    break;
+                case 'D':
+                    perfil.JeanGrey++;
+                    break;
+            }
+        }
+
+        const max = Math.max(perfil.HomemAranha, perfil.PanteraNegra, perfil.Wolverine, perfil.JeanGrey);
+
+        let resultado = '';
+
+        for (const [key, value] of Object.entries(perfil)) {
+            if (value === max) {
+                resultado = key;
+                break;
+            }
+        }
+
+       
+
+        
+
+        document.getElementById('resultado').innerHTML = `Você se asemelha com o personagem: <h1>${resultado}</h1>`;
+
+        var heroi = resultado
+
+        // Junto com o resultadoTexto eu preciso exibir a imagem diferente de acordo com o heroi sorteado
+
+        if (heroi == 'HomemAranha') {
+            
+            resultadoTexto.innerHTML = 'O Homem aranha é um grande herói'
+        } 
+        
+        if (heroi == 'PanteraNegra') {
+            resultadoTexto.innerHTML = 'O Pantera Negra é o protetor de Wakanda'
+        }
+
+        if (heroi == 'Wolverine') {
+            resultadoTexto.innerHTML = 'O Wolverine é um exemplo a se seguir'
+        }
+
+        if (heroi == 'JeanGrey') {
+            resultadoTexto.innerHTML = 'A Jean Grey tem a mente forte como aço'
+        }
+
+
+
+
+
+        fetch("/quiz/cadastrar", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      // crie um atributo que recebe o valor recuperado aqui
+      // Agora vá para o arquivo routes/usuario.js
+      heroiServer: heroi,
+      fk_usuarioServer: fk_usuario
+      
+    }),
+  })
+    .then(function (resposta) {
+      console.log("resposta: ", resposta);
+
+      if (resposta.ok) {
+       
+
+          alert('Suas respostas foram salvas')
+          
+
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+
+
+        
+
+       
+
+
+
+
+
+        clicou = true; // Atualiza a variável para impedir futuras execuções
+    } else{
+        alert('O resultado do quiz já foi armazenado')
+    }
+
+
+
+}
+
+
+//         const perfil = {
+//             'HomemAranha': 0,
+//             'PanteraNegra': 0,
+//             'Wolverine': 0,
+//             'JeanGrey': 0
+//         };
+
+//         for (const resposta of respostas) {
+//             switch (resposta) {
+//                 case 'A':
+//                     perfil.HomemAranha++;
+//                     break;
+//                 case 'B':
+//                     perfil.PanteraNegra++;
+//                     break;
+//                 case 'C':
+//                     perfil.Wolverine++;
+//                     break;
+//                 case 'D':
+//                     perfil.JeanGrey++;
+//                     break;
+//             }
+//         }
+
+//         const max = Math.max(perfil.HomemAranha, perfil.PanteraNegra, perfil.Wolverine, perfil.JeanGrey);
+
+//         let resultado = '';
+
+//         for (const [key, value] of Object.entries(perfil)) {
+//             if (value === max) {
+//                 resultado = key;
+//                 break;
+//             }
+//         }
+
+       
+
+        
+
+//         document.getElementById('resultado').innerHTML = `Você se asemelha com o personagem: <h1>${resultado}</h1>`;
+
+//         var heroi = resultado
+
+//         // Junto com o resultadoTexto eu preciso exibir a imagem diferente de acordo com o heroi sorteado
+
+//         if (heroi == 'HomemAranha') {
+            
+//             resultadoTexto.innerHTML = 'O Homem aranha é um grande herói'
+//         } 
+        
+//         if (heroi == 'PanteraNegra') {
+//             resultadoTexto.innerHTML = 'O Pantera Negra é o protetor de Wakanda'
+//         }
+
+//         if (heroi == 'Wolverine') {
+//             resultadoTexto.innerHTML = 'O Wolverine é um exemplo a se seguir'
+//         }
+
+//         if (heroi == 'JeanGrey') {
+//             resultadoTexto.innerHTML = 'A Jean Grey tem a mente forte como aço'
+//         }
+
+
+
+
+
+//         fetch("/quiz/cadastrar", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       // crie um atributo que recebe o valor recuperado aqui
+//       // Agora vá para o arquivo routes/usuario.js
+//       heroiServer: heroi,
+//       fk_usuarioServer: fk_usuario
+      
+//     }),
+//   })
+//     .then(function (resposta) {
+//       console.log("resposta: ", resposta);
+
+//       if (resposta.ok) {
+       
+
+//           alert('Suas respostas foram salvas')
+          
+
+//         } else {
+//           throw "Houve um erro ao tentar realizar o cadastro!";
+//         }
+//       })
+
+
+        
+
+        
+//     }
 
 </script>
 

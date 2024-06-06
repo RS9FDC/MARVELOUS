@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bangers', 'Segoe UI', sans-serif
+}
+
+#nav{
+    width: 100%;
+    height: 100px;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+background-color: #CC0436;
+
+
+
+}
+#nav img{
+     height: 100%;
+
+}
+
+#nav a{
+   color: white;
+   font-size: 20px;
+   text-decoration: none;
+   
+}
+
+
+#nav #botao  {
+    background: linear-gradient(-60deg,#8789f3,#ff002f); 
+    color: white;
+    border: none;
+    height: 50px; 
+    width: 120px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    cursor: pointer;
+    font-size: 17px; 
+    border-radius: 30px;
+    text-decoration: none;
+   
+  }
+
+  
+  #nav #botao:hover {
+    background: linear-gradient(60deg,#8789f3,#ff002f);/* Mudança de cor ao passar o mouse */
+  }
+
+  
+  
+  
+  
+  body {
+    height: 100%;
+    width: 100%;
+    background-color: #ae0e14;
+  }
+
+  /* TUDO ERRADO DAQUI PARA BAIXO, REBECA ME AJUDA    */
+
+
+.Sobre{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.Sobre h1{
+    font-size: 60px;
+}
+.Sobre .blocos{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+
+}
+.Sobre .blocos .texto{
+    width: 40%;
+    text-align: center;
+    
+    
+}
+.Sobre .blocos .foto{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 40%;
+    height:600px;
+}
+.Sobre .blocos .foto img{
+    margin: 50px;
+    box-shadow: 0 0 30px rgb(0, 4, 255);
+    border-radius: 15px;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+background-color: #CC0436;
+}
+
+footer a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+footer #github {
+font-size: 50px;
+color: rgb(0, 0, 0);
+}
+
+footer #insta {
+font-size: 50px;
+color: rgb(0, 0, 0);
+}
+
+html {
+    scroll-behavior: smooth;
+}

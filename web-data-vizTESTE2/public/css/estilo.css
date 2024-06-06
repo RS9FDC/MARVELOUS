@@ -21,9 +21,13 @@ body {
   margin: auto;
 }
 
+.container h1{
+  color: white;
+}
+
 .header {
   height: var(--tamanho-header);
-  border-bottom: 2px solid #32b9cd;
+  border-bottom: 2px solid #e60000;
 }
 
 .header .container {
@@ -51,7 +55,7 @@ body {
 }
 
 .titulo {
-  color: #32b9cd;
+  color: #e60000;
   width: fit-content;
   font-weight: 500;
 }
@@ -121,7 +125,7 @@ body {
 /* FOOTER */
 
 .footer {
-  background-color: #32b9cd;
+  background-color: #e60000;
   height: 150px;
   color: #fff;
   display: flex;
@@ -183,16 +187,16 @@ body {
 }
 
 .formulario input {
-  border: 2px solid #32b9cd;
+  border: 2px solid #e60000;
   text-align: center;
   border-radius: 10px;
   margin: 0;
 }
 
 .formulario select {
-  border: 2px solid #32b9cd;
+  border: 2px solid #e60000;
   background-color: white;
-  color: gray;
+  color: white;
   height: 36px;
   text-align: center;
   border-radius: 10px;
@@ -245,7 +249,7 @@ body {
 .card_erro {
   display: none;
   background-color: #fff;
-  color: black;
+  color: white;
   width: 230px;
   position: fixed;
   border-radius: 4px;
@@ -271,7 +275,7 @@ body {
 
 input {
   margin-bottom: 10px;
-  border: 2px solid #32b9cd;
+  border: 2px solid #e60000;
   padding: 10px;
   text-align: center;
   border-radius: 10px;

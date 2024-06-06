@@ -24,7 +24,7 @@ create table quiz (
 id int primary key auto_increment,
 heroi varchar(45),
 fk_usuario INT,
-constraint chkheroi check (heroi in ('HomemAranha','PanteraNegra','Wolverine','JeanGray')),
+constraint chkheroi check (heroi in ('HomemAranha','PanteraNegra','Wolverine','JeanGrey')),
 FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
@@ -60,20 +60,28 @@ JOIN usuario u ON q.fk_usuario = u.id
 WHERE q.heroi IN ('Wolverine')
 GROUP BY q.heroi;
 
--- Calculando a idade média apenas para a Jean Gray
+-- Calculando a idade média apenas para a Jean Grey
 SELECT q.heroi, AVG(u.idade) AS idade_media
 FROM quiz q
 JOIN usuario u ON q.fk_usuario = u.id
-WHERE q.heroi IN ('JeanGray')
+WHERE q.heroi IN ('JeanGrey')
 GROUP BY q.heroi;
 
 -- Calculando a idade média geral
 SELECT AVG(idade) AS idade_media
 FROM usuario;
 
+SELECT heroi, COUNT(*) AS vezes_apareceu
+FROM quiz
+GROUP BY heroi
+;
+
+
+
+
 
 
 -- truncate table usuario;
 
- -- drop database Marvelous;
+-- drop database Marvelous;
 
