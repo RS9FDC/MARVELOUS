@@ -77,6 +77,15 @@ GROUP BY heroi
 ;
 
 
+SELECT
+    SUM(CASE WHEN idade <= 15 THEN 1 ELSE 0 END) AS faixa_0_15,
+    SUM(CASE WHEN idade BETWEEN 16 AND 24 THEN 1 ELSE 0 END) AS faixa_16_24,
+    SUM(CASE WHEN idade BETWEEN 25 AND 30 THEN 1 ELSE 0 END) AS faixa_25_30,
+    SUM(CASE WHEN idade > 30 THEN 1 ELSE 0 END) AS faixa_30_mais
+FROM
+    usuario;
+
+
 
 
 

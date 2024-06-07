@@ -28,7 +28,7 @@
 
 <!-- <body onload=" atualizarFeed()"> -->
 
-<body  onload="obterDadosGrafico()">
+<body  onload="obterDadosGrafico();obterDadosGrafico2()">
 
     <div class="janela">
         <div class="header-left">
@@ -75,11 +75,31 @@
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
             </div>
 
+
+
+
+            <div id="graficos2">
+                <h1 style="text-align: center; color: white;">Marvel é para todos!</h1>
+                <canvas id="myChartCanvas2"></canvas>
+
+            </div>
+
             <div id="graficos">
                 <h1 style="text-align: center; color: white;">Quantidade de pessoas para cada herói</h1>
                 <canvas id="myChartCanvas"></canvas>
 
             </div>
+
+
+            <!-- <div id="graficos2">
+                <h1 style="text-align: center; color: white;">Marvel é para todos!</h1>
+                <canvas id="myChartCanvas2"></canvas>
+
+            </div> -->
+
+
+
+
         </div>
     </div>
 
@@ -171,6 +191,140 @@
         );
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function obterDadosGrafico2() {
+
+
+fetch(`/medidas/ultimas2`, { cache: 'no-store' }).then(function (response) {
+    if (response.ok) {
+        response.json().then(function (resposta) {
+            console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+            resposta.reverse();
+
+            plotarGrafico2(resposta);
+
+        });
+    } else {
+        console.error('Nenhum dado encontrado ou erro na API');
+    }
+})
+    .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+    });
+}
+
+
+var faixa0a15 = 0
+var faixa16a24 = 0
+var faixa25a30 = 0
+var faixa31acima = 0
+
+var idades = []
+
+
+
+
+
+
+function plotarGrafico2(resposta) {
+
+console.log('iniciando plotagem do gráfico...');
+
+// Criando estrutura para plotar gráfico - labels
+let labels = ['0-15','16-24','25-30','31+'];
+
+// Criando estrutura para plotar gráfico - dados
+let dados = {
+    labels: labels,
+    datasets: [{
+        label: 'Faixa etária dos usuários Marvelous',
+        data: idades,
+        fill: false,
+        borderColor: 'rgb(75, 192, 192)',
+        backgroundColor : ['red'],
+        tension: 0.1
+    },]
+};
+
+console.log('----------------------------------------------')
+console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico2" e passados para "plotarGrafico2":')
+console.log(resposta)
+
+// Inserindo valores recebidos em estrutura para plotar o gráfico
+for (i = 0; i < resposta.length; i++) {
+    var registro = resposta[i].idade
+    // labels.push(registro.idade);
+    // dados.datasets[0].data.push(registro.faixa_0_15);
+    // dados.datasets[0].data.push(registro.faixa_16_24);
+    // dados.datasets[0].data.push(registro.faixa_25_30);
+    // dados.datasets[0].data.push(registro.faixa_30_mais);
+
+    if (registro <= 15) {
+        faixa0a15++
+    }
+
+    if (registro >= 16 && registro <= 24) {
+        faixa16a24++
+    }
+
+    if (registro >= 25 && registro <= 30) {
+        faixa25a30++
+    }
+
+    if (registro > 30) {
+        faixa31acima++
+    }
+}
+
+idades.push(faixa0a15,faixa16a24,faixa25a30,faixa31acima)
+
+
+
+console.log('----------------------------------------------')
+console.log('O gráfico será plotado com os respectivos valores:')
+console.log('Labels:')
+console.log(labels)
+console.log('Dados:')
+console.log(dados.datasets)
+console.log('----------------------------------------------')
+
+// Criando estrutura para plotar gráfico - config
+const config = {
+    type: 'bar',
+    data: dados,
+};
+
+// Adicionando gráfico criado em div na  tela
+let myChart = new Chart(
+    document.getElementById(`myChartCanvas2`),
+    config
+);
+
+}
 
 
    

@@ -11,6 +11,28 @@ function buscarUltimasMedidas() {
 }
 
 
+// module.exports = {
+//     buscarUltimasMedidas
+// }
+
+
+
+
+
+
+
+
+
+function buscarUltimasMedidas2() {
+
+    var instrucaoSql = `SELECT idade FROM usuario`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+
 module.exports = {
-    buscarUltimasMedidas
+    buscarUltimasMedidas,
+    buscarUltimasMedidas2
 }

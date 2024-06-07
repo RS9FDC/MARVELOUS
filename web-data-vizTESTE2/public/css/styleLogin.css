@@ -18,6 +18,22 @@
 
 }
 
+
+
+#container #voltar{
+    transform: translate(-270px, -330px);
+    color: white;
+    font-size: 38px;
+    text-decoration: none;
+}
+
+/* #sair span{
+    text-decoration: none;
+    color: white;
+} */
+
+
+
 #cadastro_form {
     background-color: rgba(255, 255, 255, 0.5);
     display: flex;
