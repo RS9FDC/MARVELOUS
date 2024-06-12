@@ -151,6 +151,20 @@ button:hover {
     font-size: 12px;
   }
 
+
+  /* #resultado{
+
+  } */
+
+
+  #resultado #imagem{
+    margin-left: 50px;
+    height: 80%;
+    margin-top: 70px;
+    
+    box-shadow: 0 0 30px rgb(0, 4, 255);
+  }
+
   @keyframes bell {
     0%   {transform: rotate(25deg)}
     25%  {transform: rotate(-25deg)}

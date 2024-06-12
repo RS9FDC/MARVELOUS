@@ -223,7 +223,10 @@
                             <!-- <button type="button" onclick="result()">Descobrir Resultado</button> -->
                         <!-- </div> -->
                     </form>
-                    <div id="resultado"></div><br><br>
+                    <div id="resultado">
+                        <img id="imagem" src="" alt="imagem">
+                    </div>
+                    <br><br>
                     <div id="resultadoTexto"></div>
         
         
@@ -341,7 +344,7 @@
         }
 
        
-
+        var imagem = document.getElementById("imagem");
         
 
         document.getElementById('resultado').innerHTML = `Você se asemelha com o personagem: <h1>${resultado}</h1>`;
@@ -351,19 +354,22 @@
         // Junto com o resultadoTexto eu preciso exibir a imagem diferente de acordo com o heroi sorteado
 
         if (heroi == 'HomemAranha') {
-            
+            imagem.src = "../assets/homemAranhaQuiz.jpeg"
             resultadoTexto.innerHTML = 'O Homem aranha é um grande herói'
         } 
         
         if (heroi == 'PanteraNegra') {
+            imagem.src = "../assets/panteraNegraQuiz.jpeg"
             resultadoTexto.innerHTML = 'O Pantera Negra é o protetor de Wakanda'
         }
 
         if (heroi == 'Wolverine') {
+            imagem.src = "../assets/wolverineQuiz.jpeg"
             resultadoTexto.innerHTML = 'O Wolverine é um exemplo a se seguir'
         }
 
         if (heroi == 'JeanGrey') {
+            imagem.src = "../assets/jeanGreyQuiz.jpeg"
             resultadoTexto.innerHTML = 'A Jean Grey tem a mente forte como aço'
         }
 
