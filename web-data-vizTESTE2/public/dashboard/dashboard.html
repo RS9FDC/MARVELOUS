@@ -239,9 +239,9 @@ fetch(`/medidas/ultimas2`, { cache: 'no-store' }).then(function (response) {
 
 
 var faixa0a15 = 0
-var faixa16a24 = 0
-var faixa25a30 = 0
-var faixa31acima = 0
+var faixa16a30 = 0
+var faixa31a50 = 0
+var faixa51acima = 0
 
 var idades = []
 
@@ -255,7 +255,7 @@ function plotarGrafico2(resposta) {
 console.log('iniciando plotagem do gráfico...');
 
 // Criando estrutura para plotar gráfico - labels
-let labels = ['0-15','16-24','25-30','31+'];
+let labels = ['0-15','16-30','31-50','51+'];
 
 // Criando estrutura para plotar gráfico - dados
 let dados = {
@@ -287,20 +287,20 @@ for (i = 0; i < resposta.length; i++) {
         faixa0a15++
     }
 
-    if (registro >= 16 && registro <= 24) {
-        faixa16a24++
+    if (registro >= 16 && registro <= 30) {
+        faixa16a30++
     }
 
-    if (registro >= 25 && registro <= 30) {
-        faixa25a30++
+    if (registro >= 31 && registro <= 50) {
+        faixa31a50++
     }
 
-    if (registro > 30) {
-        faixa31acima++
+    if (registro > 50) {
+        faixa51acima++
     }
 }
 
-idades.push(faixa0a15,faixa16a24,faixa25a30,faixa31acima)
+idades.push(faixa0a15,faixa16a30,faixa31a50,faixa51acima)
 
 
 

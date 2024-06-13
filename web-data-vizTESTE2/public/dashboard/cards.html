@@ -223,10 +223,15 @@
                             <!-- <button type="button" onclick="result()">Descobrir Resultado</button> -->
                         <!-- </div> -->
                     </form>
-                    <div id="resultado">
-                        <img id="imagem" src="" alt="imagem">
+
+                    <div id="resultadoHeroi"></div>
+
+                    <div id="imagemDiv">
+                        <img id="imagem" src="" alt="imagem" style="display: none;">
                     </div>
+
                     <br><br>
+
                     <div id="resultadoTexto"></div>
         
         
@@ -344,34 +349,81 @@
         }
 
        
-        var imagem = document.getElementById("imagem");
         
-
-        document.getElementById('resultado').innerHTML = `Você se asemelha com o personagem: <h1>${resultado}</h1>`;
+        
+        document.getElementById('resultadoHeroi').innerHTML = `<br>Você se asemelha com o personagem: <h2>${resultado}</h2>`;
 
         var heroi = resultado
 
+        var imagem = document.getElementById("imagem");
+
         // Junto com o resultadoTexto eu preciso exibir a imagem diferente de acordo com o heroi sorteado
+
+        if(heroi){
 
         if (heroi == 'HomemAranha') {
             imagem.src = "../assets/homemAranhaQuiz.jpeg"
-            resultadoTexto.innerHTML = 'O Homem aranha é um grande herói'
-        } 
+            resultadoTexto.innerHTML = 'Você compartilha a agilidade e criatividade do Homem-Aranha, encontrando soluções rápidas e inovadoras para os problemas. Sua empatia e altruísmo o impulsionam a ajudar os outros, mesmo que isso signifique enfrentar desafios pessoais.'
+        } else
         
         if (heroi == 'PanteraNegra') {
             imagem.src = "../assets/panteraNegraQuiz.jpeg"
-            resultadoTexto.innerHTML = 'O Pantera Negra é o protetor de Wakanda'
-        }
+            resultadoTexto.innerHTML = 'Assim como o Pantera Negra, você é estratégico e determinado. Sua inteligência e habilidades de planejamento o ajudam a superar obstáculos com resiliência. Você busca a justiça e a igualdade, lutando pelos direitos daqueles que precisam de proteção.'
+        }else
 
         if (heroi == 'Wolverine') {
             imagem.src = "../assets/wolverineQuiz.jpeg"
-            resultadoTexto.innerHTML = 'O Wolverine é um exemplo a se seguir'
-        }
+            resultadoTexto.innerHTML = 'Sua força e coragem refletem as qualidades do Wolverine. Você enfrenta desafios com bravura e determinação, nunca desistindo diante da adversidade. Seu instinto protetor o impulsiona a cuidar daqueles que ama, mesmo em situações difíceis.'
+        }else
 
         if (heroi == 'JeanGrey') {
             imagem.src = "../assets/jeanGreyQuiz.jpeg"
-            resultadoTexto.innerHTML = 'A Jean Grey tem a mente forte como aço'
+            resultadoTexto.innerHTML = 'Assim como Jean Grey, você possui controle emocional e empatia. Sua capacidade de manter a calma e usar sua mente racionalmente em momentos difíceis é impressionante. Sua compaixão e vontade de ajudar os outros fazem de você uma presença reconfortante em sua comunidade.'
+        } else {
+            imagemDiv.style.display = "none";
         }
+
+        imagem.style.display = "block";
+        } else {
+        imagem.style.display = "none";
+
+
+        
+    }
+
+    
+
+
+// var imagemDiv = document.getElementById("imagemDiv");
+// var imagem = document.getElementById("imagem");
+
+
+// switch (heroi) {
+//     case "HomemAranha":
+//         imagem.src = "../assets/homemAranhaQuiz.jpeg"
+//         imagemDiv.style.display = "block"; // Exibe a div
+//         break;
+//     case "PanteraNegra":
+//         imagem.src = "../assets/panteraNegraQuiz.jpeg"
+//         imagemDiv.style.display = "block"; // Exibe a div
+//         break;
+//     case "Wolverine":
+//         imagem.src = "../assets/wolverineQuiz.jpeg"
+//         imagemDiv.style.display = "block"; // Exibe a div
+//         break;
+//     case "JeanGrey":
+//         imagem.src = "../assets/jeanGreyQuiz.jpeg"
+//         imagemDiv.style.display = "block"; // Exibe a div
+//         break;
+//     default:
+//         // Caso o herói não corresponda a nenhum conhecido, oculta a div
+//         imagemDiv.style.display = "none";
+// }
+
+
+
+
+
 
 
 

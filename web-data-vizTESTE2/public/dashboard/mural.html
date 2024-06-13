@@ -153,6 +153,8 @@
     }
 
     function deletar(idAviso) {
+
+
         console.log("Criar função de apagar post escolhido - ID" + idAviso);
         fetch(`/avisos/deletar/${idAviso}`, {
             method: "DELETE",
@@ -172,6 +174,8 @@
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
         });
+
+        
     }
 
     function atualizarFeed() {
@@ -204,7 +208,7 @@
                         var btnDeletar = document.createElement("button");
 
 
-                        spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
+                        // spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
                         spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
                         spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
                         divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";

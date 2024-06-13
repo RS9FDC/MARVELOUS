@@ -94,6 +94,12 @@ body {
   color: #e60000;
 }
 
+#questionario h2 {
+  font-size: 40px;
+  /* margin-bottom: 70px; */
+  color: #e60000;
+}
+
 label {
   
   font-size: 30px;
@@ -125,44 +131,44 @@ button:hover {
   background: linear-gradient(90deg, #000000,#737373);
 }
 
-#resultado {
-  margin-top: 20px;
-  font-size: 20px;
-  color: var(--primary-color);
+#imagemDiv {
+  /* margin-top: 30px; */
+  /* margin-left: 10px; */
+  /* font-size: 20px; */
+  /* height: 100px; */
+  /* height: 300px; */
+  display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* FOOTER */
 
-.footer {
-    background-color: #32b9cd;
-    height: 150px;
-    color: #fff;
+  
+
+
+  #imagemDiv #imagem{
+    /* margin-left: 50px; */
+    /* height: 60%; */
+    /* margin-top: 70px; */
+margin-top: 30px;
     display: flex;
-    font-size: 15px;
-    margin-top: 150px;
-  }
-  
-  .footer .container {
+    align-items: center;
     justify-content: center;
-    text-align: center;
-  }
-  
-  .footer .container .version {
-    font-size: 12px;
-  }
-
-
-  /* #resultado{
-
-  } */
-
-
-  #resultado #imagem{
-    margin-left: 50px;
-    height: 80%;
-    margin-top: 70px;
+    border-radius: 15px;
+    width: 300px;
+    height: 400px;
     
-    box-shadow: 0 0 30px rgb(0, 4, 255);
+    /* box-shadow: 0 0 30px rgb(0, 4, 255); */
+  }
+
+  #resultadoHeroi{
+    color: white;
+    font-size: 20px;
+  }
+
+  #resultadoTexto{
+    color: white;
+    font-size: 20px;
   }
 
   @keyframes bell {

@@ -20,10 +20,13 @@ CREATE TABLE aviso (
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
+ALTER TABLE aviso
+MODIFY COLUMN descricao VARCHAR(250);
+
 create table quiz (
 id int primary key auto_increment,
 heroi varchar(45),
-fk_usuario INT,
+fk_usuario INT UNIQUE,
 constraint chkheroi check (heroi in ('HomemAranha','PanteraNegra','Wolverine','JeanGrey')),
 FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );

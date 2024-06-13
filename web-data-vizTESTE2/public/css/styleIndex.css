@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -140,6 +142,10 @@ background-color: #CC0436;
     margin: 100px;
   }
 
+  #txt1 p{
+    font-family: 'Barlow'
+  }
+
 
 
   #txt1 h1{
@@ -150,15 +156,16 @@ background-color: #CC0436;
 #herois p {
 display: flex;
 margin-top: 10px;
-text-align: center;
-font-size: 20px;
+text-align: left;
+font-size: 17px;
 color: white;
+text-shadow: 0 0 10px black;
 }
 
   #herois2 {
     background: rgb(52,18,66);
     background: linear-gradient(160deg, rgba(52,18,66,1) 46%, rgba(250, 218, 40) 46%);
-    height: 700px;
+    height: 800px;
     display: flex;
     
     
@@ -179,6 +186,10 @@ color: white;
     
   }
 
+  #txt2 p{
+    font-family: 'Barlow'
+  }
+
 
 
   #txt2 h1{
@@ -190,10 +201,10 @@ color: white;
 #herois2 p {
 /* display: flex; */
 margin-top: 20px;
-font-size: 22px;
-text-align: center;
+font-size: 18px;
+text-align: left;
 color: white;
-
+text-shadow: 0 0 10px black;
 
 
 }
@@ -230,14 +241,19 @@ color: white;
      text-align: center;
      color: rgb(0, 0, 0);
     }
+
+    #txt3 p{
+      font-family: 'Barlow'
+    }
     
   
 
 #herois3 p {
 display: flex;
 margin-top: 10px;
-font-size: 22px;
-text-align: center;
+font-size: 17px;
+text-align: left;
+text-shadow: 0 0 10px black;
 }
 
 
@@ -252,7 +268,7 @@ text-align: center;
 }*/
 
 #onu {
-    height: 700px;
+    height: 800px;
     display: flex;
     background-color: #8789f3;
     justify-content: center;
@@ -273,7 +289,7 @@ text-align: center;
 #onu img{
     display: flex;
     align-items: center;
-    height: 60%;
+    height: 300px;
     /* margin-top: 200px; */
 }
 
@@ -285,9 +301,13 @@ text-align: center;
   margin-right: 110px;
   margin-top: 30px;
   margin-bottom: 30px;
-  text-align: center;
-  font-size: 18px;
+  text-align: left;
+  font-size: 17px;
   color: white;
+}
+
+#txtonu p{
+  font-family: 'Barlow';
 }
 
 footer {
