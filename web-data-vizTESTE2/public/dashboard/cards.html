@@ -240,62 +240,32 @@
             </div>
 
 
-
-
-
-
-
-
-
-
-            <!-- <div class="cards" id="cardAquarios">
-
-            </div> -->
-
-       
-
     </div>
 
 </body>
 
 <script>
 
-    // function exibirAquarios() {
-    //     JSON.parse(sessionStorage.AQUARIOS).forEach(item => {
-    //         document.getElementById("cardAquarios").innerHTML += `
-    //                 <div class="card-aquario">
-    //                     <div class="title-aquario">
-    //                         <h1>${item.descricao}</h1>
-    //                     </div>
-    //                     <div class="desc-aquario">
-    //                     <div class="temperatura">
-    //                         <p id="temp_aquario_${item.id}">-°C</p>
-    //                     </div>
-    //                     <div class="cor-alerta" id="card_${item.id}"></div>
-    //                 </div>
-    //                 </div>
-    //                 `
-    //     });
-    // }
-
-
-
-
+    
 
 
     // ScriptDoQuiz
 
-    const respostas = [];
-    var fk_usuario = sessionStorage.ID_USUARIO;
+
+    
+    const respostas = []; // lista para armazenar o resultado do quiz
+    var fk_usuario = sessionStorage.ID_USUARIO; // puxa o id do usuario da página de login
 
     function pergunta(numPergunta) {
 
-        const select = document.querySelector(`#pergunta${numPergunta} select`);
+        const select = document.querySelector(`#pergunta${numPergunta} select`); // Pega o numero da pergunta em questão
 
-        if (select.value) {
+        if (select.value) { //verifica qual foi a resposta do usuario
 
             respostas.push(select.value);
-            document.getElementById(`pergunta${numPergunta}`).style.display = 'none';
+
+            //essa parte deixa de exibir a pergunta que foi respondida e exibe a proxima pergunta
+            document.getElementById(`pergunta${numPergunta}`).style.display = 'none'; 
             document.getElementById(`pergunta${numPergunta + 1}`).style.display = 'block';
 
         } else {
@@ -313,14 +283,14 @@
         console.log("Ação executada!");
         
 
-        const perfil = {
+        const perfil = { // json que armazena os herois que podem ser exibidos no resultado
             'HomemAranha': 0,
             'PanteraNegra': 0,
             'Wolverine': 0,
             'JeanGrey': 0
         };
 
-        for (const resposta of respostas) {
+        for (const resposta of respostas) { //validação em que adiciona um valor no personagem em que a alternativa corresponde
             switch (resposta) {
                 case 'A':
                     perfil.HomemAranha++;
@@ -341,7 +311,7 @@
 
         let resultado = '';
 
-        for (const [key, value] of Object.entries(perfil)) {
+        for (const [key, value] of Object.entries(perfil)) { //Verifica qual dos personagens obteve mais respostas correspondentes ao mesmo.
             if (value === max) {
                 resultado = key;
                 break;
@@ -349,7 +319,7 @@
         }
 
        
-        
+        // exibe uma imagem e uma breve descrição, dependendo do heroi que saiu como resultado no quiz
         
         document.getElementById('resultadoHeroi').innerHTML = `<br>Você se asemelha com o personagem: <h2>${resultado}</h2>`;
 
@@ -357,7 +327,7 @@
 
         var imagem = document.getElementById("imagem");
 
-        // Junto com o resultadoTexto eu preciso exibir a imagem diferente de acordo com o heroi sorteado
+        
 
         if(heroi){
 
@@ -393,42 +363,6 @@
 
     
 
-
-// var imagemDiv = document.getElementById("imagemDiv");
-// var imagem = document.getElementById("imagem");
-
-
-// switch (heroi) {
-//     case "HomemAranha":
-//         imagem.src = "../assets/homemAranhaQuiz.jpeg"
-//         imagemDiv.style.display = "block"; // Exibe a div
-//         break;
-//     case "PanteraNegra":
-//         imagem.src = "../assets/panteraNegraQuiz.jpeg"
-//         imagemDiv.style.display = "block"; // Exibe a div
-//         break;
-//     case "Wolverine":
-//         imagem.src = "../assets/wolverineQuiz.jpeg"
-//         imagemDiv.style.display = "block"; // Exibe a div
-//         break;
-//     case "JeanGrey":
-//         imagem.src = "../assets/jeanGreyQuiz.jpeg"
-//         imagemDiv.style.display = "block"; // Exibe a div
-//         break;
-//     default:
-//         // Caso o herói não corresponda a nenhum conhecido, oculta a div
-//         imagemDiv.style.display = "none";
-// }
-
-
-
-
-
-
-
-
-
-
         fetch("/quiz/cadastrar", {
     method: "POST",
     headers: {
@@ -448,7 +382,7 @@
       if (resposta.ok) {
        
 
-          alert('Suas respostas foram salvas')
+          console.log('Suas respostas foram salvas')
           
 
         } else {
@@ -467,112 +401,13 @@
 
         clicou = true; // Atualiza a variável para impedir futuras execuções
     } else{
-        alert('O resultado do quiz já foi armazenado')
+        console.log('O resultado do quiz já foi armazenado')
     }
 
 
 
 }
 
-
-//         const perfil = {
-//             'HomemAranha': 0,
-//             'PanteraNegra': 0,
-//             'Wolverine': 0,
-//             'JeanGrey': 0
-//         };
-
-//         for (const resposta of respostas) {
-//             switch (resposta) {
-//                 case 'A':
-//                     perfil.HomemAranha++;
-//                     break;
-//                 case 'B':
-//                     perfil.PanteraNegra++;
-//                     break;
-//                 case 'C':
-//                     perfil.Wolverine++;
-//                     break;
-//                 case 'D':
-//                     perfil.JeanGrey++;
-//                     break;
-//             }
-//         }
-
-//         const max = Math.max(perfil.HomemAranha, perfil.PanteraNegra, perfil.Wolverine, perfil.JeanGrey);
-
-//         let resultado = '';
-
-//         for (const [key, value] of Object.entries(perfil)) {
-//             if (value === max) {
-//                 resultado = key;
-//                 break;
-//             }
-//         }
-
-       
-
-        
-
-//         document.getElementById('resultado').innerHTML = `Você se asemelha com o personagem: <h1>${resultado}</h1>`;
-
-//         var heroi = resultado
-
-//         // Junto com o resultadoTexto eu preciso exibir a imagem diferente de acordo com o heroi sorteado
-
-//         if (heroi == 'HomemAranha') {
-            
-//             resultadoTexto.innerHTML = 'O Homem aranha é um grande herói'
-//         } 
-        
-//         if (heroi == 'PanteraNegra') {
-//             resultadoTexto.innerHTML = 'O Pantera Negra é o protetor de Wakanda'
-//         }
-
-//         if (heroi == 'Wolverine') {
-//             resultadoTexto.innerHTML = 'O Wolverine é um exemplo a se seguir'
-//         }
-
-//         if (heroi == 'JeanGrey') {
-//             resultadoTexto.innerHTML = 'A Jean Grey tem a mente forte como aço'
-//         }
-
-
-
-
-
-//         fetch("/quiz/cadastrar", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify({
-//       // crie um atributo que recebe o valor recuperado aqui
-//       // Agora vá para o arquivo routes/usuario.js
-//       heroiServer: heroi,
-//       fk_usuarioServer: fk_usuario
-      
-//     }),
-//   })
-//     .then(function (resposta) {
-//       console.log("resposta: ", resposta);
-
-//       if (resposta.ok) {
-       
-
-//           alert('Suas respostas foram salvas')
-          
-
-//         } else {
-//           throw "Houve um erro ao tentar realizar o cadastro!";
-//         }
-//       })
-
-
-        
-
-        
-//     }
 
 </script>
 
